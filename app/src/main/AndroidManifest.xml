@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.icemono.lab">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".section01.AActivity"
+            android:configChanges="orientation"
+            android:label="A"
+            />
+        <activity
+            android:name=".section01.BActivity"
+            android:label="B"
+            />
+        <activity
+            android:name=".section01.CActivity"
+            android:label="C"
+            />
+
+        <activity android:name=".section02.LayoutActivity"/>
+
+        <activity android:name=".section03.TextViewActivity"/>
+    </application>
+
+</manifest>

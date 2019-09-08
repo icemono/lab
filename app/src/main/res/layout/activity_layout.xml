@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="32dp">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ALARMS"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RECORDS"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PROFILE"/>
+    </com.google.android.material.tabs.TabLayout>
+
+
+    <ImageView
+        android:id="@+id/clock_iv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_alarm_black_48dp"
+        app:layout_constraintBottom_toTopOf="@id/time_layout"
+        app:layout_constraintDimensionRatio="w, 1:1"
+        app:layout_constraintTop_toBottomOf="@id/tab_layout"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/time_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/float_btn"
+        app:layout_constraintTop_toBottomOf="@id/clock_iv"
+        >
+
+        <TextView
+            android:id="@+id/alarm_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ALARM TIME"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6:12 PM"
+            android:textColor="#333"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/alarm_title_tv"/>
+
+
+        <TextView
+            android:id="@+id/wake_title_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="WAKE UP IN"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.5"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8:00 AM"
+            android:textColor="#333"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/wake_title_tv"
+            app:layout_constraintTop_toBottomOf="@id/wake_title_tv"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="Edit Alarms"
+        app:layout_constraintBottom_toBottomOf="@id/float_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/float_btn"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/float_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

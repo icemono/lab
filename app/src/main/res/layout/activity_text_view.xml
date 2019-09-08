@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/marquee_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="Companion app for my Advanced Android TextView talk, demostrating:
+
+Animated CompoundDrawable
+Text shadow
+Custom font
+Non-breaking space
+Gradient text
+Patterned text
+HTML.fromHtml()
+setFontFeatureSettings()
+Styled string
+AlignmentSpan
+ClickableSpan
+Rainbow span, animated
+Lined paper
+Emoji"
+        android:textColor="#3000"/>
+
+
+    <EditText
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"/>
+
+</LinearLayout>
